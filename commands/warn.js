@@ -9,7 +9,7 @@ module.exports = class Warn extends commands {
     }
 
     static action (message) {
-        let warns = JSON.parse(fs.readFileSync("../Stingerbot/JSON/warn.json", "utf8"));
+        let warns = JSON.parse(fs.readFileSync("./JSON/warn.json", "utf8"));
         
         if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply('ta pas les perm');
         let wUser = message.guild.member(message.mentions.users.first()) || message.mentions.users.first();
