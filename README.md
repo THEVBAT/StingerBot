@@ -11,3 +11,26 @@
   <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/THEVBAT/StingerBot?color=2AA198&label=Last%20Release&logo=JavaScript">
 </div>
 <br>
+
+StingerBot is a little Bot created by THEVBAT with the help of the magnificent Bat-Husky.
+
+## Installation
+
+Add StingerBot to your server by clicking here : [Invite Link](https://discord.com/oauth2/authorize?client_id=835577703884521523&scope=bot&permissions=8)
+
+## Setup
+
+Download this code, put your information in JSON/config.json or it will not work. Finally, launch the bot with **nodejs** as below.
+
+```bash
+node index.js
+```
+
+## Usage
+
+List of the main commands :
+
+```
+./infobot
+./help
+```
