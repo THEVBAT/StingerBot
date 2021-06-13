@@ -1,0 +1,2 @@
+# StingerBot
+A Bot
