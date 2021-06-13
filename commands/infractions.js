@@ -10,7 +10,7 @@ module.exports = class Infractions extends commands {
     } 
     
     static action (message) {
-        let warns = JSON.parse(fs.readFileSync("../Stingerbot/JSON/warn.json", "utf8"));
+        let warns = JSON.parse(fs.readFileSync("./JSON/warn.json", "utf8"));
 
         if (!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("vous n'avez les permissions");
         if(!message.mentions.users.first()) return message.reply("Vous n'avez pas mis de mentions")
