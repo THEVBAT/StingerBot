@@ -12,7 +12,7 @@
 </div>
 <br>
 
-StingerBot is a little Bot created by THEVBAT with the help of the magnificent Bat-Husky.
+StingerBot is a little Bot created by THEVBAT with the help of **Bat-Husky The Magnificent**.
 
 ## Installation
 
