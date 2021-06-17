@@ -1,7 +1,7 @@
 # StingerBot
 
 <p align="center">
-  <img src="https://bat-husky.github.io/StingerBotus.jpg">
+  <img src="./Img/StingerBotus.jpg">
 </p>
 
 <div align="center">
@@ -34,3 +34,9 @@ List of the main commands :
 ./infobot
 ./help
 ```
+
+# An EcoDigital project
+
+StingerBot is lovingly programmed with respect for the environment
+
+![](./Img/StingerCode.png)
