@@ -39,4 +39,36 @@ List of the main commands :
 
 StingerBot is lovingly programmed with respect for the environment
 
-![](./Img/StingerCodus.png)
+```javascript
+if (!notes[nUser.id]) {
+    notes[nUser.id] = {
+        nombre: 0,
+        note: [],
+        noteur: []
+    };
+
+    let UserInfo = {
+        name: nUser.tag,
+        id: nUser.id
+    }
+    names["User"].push(UserInfo);
+}
+
+for (const noteur in notes[nUser.id]["noteur"]) {
+    if (message.author.id == notes[nUser.id]["noteur"][noteur]) return message.reply("Vous l'avez déjà noté!")
+}
+
+let nNote = message.content.toString().split(' ')[3]
+nNote = Number(nNote);
+if (nNote > 10 || nNote < 0) return message.reply("La note est comprise entre 0 et 10");      
+
+notes[nUser.id]["noteur"].push(message.author.id);
+notes[nUser.id]["note"].push(nNote);
+notes[nUser.id]["nombre"]++;
+
+fs.writeFile("../Stingerbot/JSON/UserNote.json", JSON.stringify(names), (err) => {
+    if (err) {
+        console.log(err);
+    }
+});
+```
