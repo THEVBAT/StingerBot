@@ -39,4 +39,4 @@ List of the main commands :
 
 StingerBot is lovingly programmed with respect for the environment
 
-![](./Img/StingerCode.png)
+![](./Img/StingerCodus.png)
