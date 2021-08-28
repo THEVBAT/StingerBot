@@ -22,8 +22,8 @@ module.exports = class Note extends commands {
     }
 
     static UserNoter (message, nUser) {
-        let notes = JSON.parse(fs.readFileSync("./JSON/note.json", "utf8"))
-        let names = JSON.parse(fs.readFileSync("./JSON/UserNote.json", "utf8"))
+        let notes = JSON.parse(fs.readFileSync("../botdeouf/JSON/note.json", "utf8"))
+        let names = JSON.parse(fs.readFileSync("../botdeouf/JSON/UserNote.json", "utf8"))
         if (!nUser) return message.channel.send("Qui voulez-vous noter ? `./note noter <user> <note>`");
 
         if (!notes[nUser.id]) {
@@ -52,13 +52,13 @@ module.exports = class Note extends commands {
         notes[nUser.id]["note"].push(nNote);
         notes[nUser.id]["nombre"]++;
 
-        fs.writeFile("./JSON/UserNote.json", JSON.stringify(names), (err) => {
+        fs.writeFile("../botdeouf/JSON/UserNote.json", JSON.stringify(names), (err) => {
             if (err) {
                 console.log(err);
             }
         });
 
-        fs.writeFile("./JSON/note.json", JSON.stringify(notes), (err) => {
+        fs.writeFile("../botdeouf/JSON/note.json", JSON.stringify(notes), (err) => {
             if (err) {
                 console.log(err);
             }
@@ -81,7 +81,7 @@ module.exports = class Note extends commands {
     }
 
     static InfoUser (message, nUser) {
-        let notes = JSON.parse(fs.readFileSync("./JSON/note.json", "utf8"))
+        let notes = JSON.parse(fs.readFileSync("../botdeouf/JSON/note.json", "utf8"))
         var num = 0;
 
         for (var i = 0; i < notes[nUser.id]["note"].length; i++) {
@@ -95,8 +95,8 @@ module.exports = class Note extends commands {
     }
 
     static list (message) {
-        let names = JSON.parse(fs.readFileSync("./JSON/UserNote.json", "utf8"))
-        let notes = JSON.parse(fs.readFileSync("./JSON/note.json", "utf8"))
+        let names = JSON.parse(fs.readFileSync("../botdeouf/JSON/UserNote.json", "utf8"))
+        let notes = JSON.parse(fs.readFileSync("../botdeouf/JSON/note.json", "utf8"))
         message.channel.send("Les personnes notées sont :")
         for (const index in names["User"]) {
             var nUser = names["User"][index]["id"]
